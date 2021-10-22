@@ -3,6 +3,8 @@ import axios from "axios";
 
 const AppContext = React.createContext();
 
+const api_key = process.env.REACT_APP_API_KEY;
+
 const AppProvider = ({ children }) => {
   const [data, setData] = useState();
   const [extraData, setExtraData] = useState();
@@ -25,7 +27,7 @@ const AppProvider = ({ children }) => {
       url: "https://coinranking1.p.rapidapi.com/stats",
       headers: {
         "x-rapidapi-host": "coinranking1.p.rapidapi.com",
-        "x-rapidapi-key": "e5123ac6d1msh54e5b36d11d6985p11249ajsn62e857d978b9",
+        "x-rapidapi-key": api_key,
       },
     };
     const data = axios.request(options);
@@ -48,7 +50,7 @@ const AppProvider = ({ children }) => {
       url: "https://coingecko.p.rapidapi.com/global",
       headers: {
         "x-rapidapi-host": "coingecko.p.rapidapi.com",
-        "x-rapidapi-key": "e5123ac6d1msh54e5b36d11d6985p11249ajsn62e857d978b9",
+        "x-rapidapi-key": api_key,
       },
     };
     const data = axios.request(options);
@@ -78,7 +80,7 @@ const AppProvider = ({ children }) => {
       },
       headers: {
         "x-rapidapi-host": "coingecko.p.rapidapi.com",
-        "x-rapidapi-key": "e5123ac6d1msh54e5b36d11d6985p11249ajsn62e857d978b9",
+        "x-rapidapi-key": api_key,
       },
     };
 
@@ -109,7 +111,7 @@ const AppProvider = ({ children }) => {
       headers: {
         "x-bingapis-sdk": "true",
         "x-rapidapi-host": "bing-news-search1.p.rapidapi.com",
-        "x-rapidapi-key": "e5123ac6d1msh54e5b36d11d6985p11249ajsn62e857d978b9",
+        "x-rapidapi-key": api_key,
       },
     };
 
@@ -141,7 +143,7 @@ const AppProvider = ({ children }) => {
       headers: {
         "x-bingapis-sdk": "true",
         "x-rapidapi-host": "bing-news-search1.p.rapidapi.com",
-        "x-rapidapi-key": "e5123ac6d1msh54e5b36d11d6985p11249ajsn62e857d978b9",
+        "x-rapidapi-key": api_key,
       },
     };
 
@@ -164,7 +166,7 @@ const AppProvider = ({ children }) => {
       params: { vs_currency: "usd", days: `${days}` },
       headers: {
         "x-rapidapi-host": "coingecko.p.rapidapi.com",
-        "x-rapidapi-key": "e5123ac6d1msh54e5b36d11d6985p11249ajsn62e857d978b9",
+        "x-rapidapi-key": api_key,
       },
     };
 
@@ -199,7 +201,7 @@ const AppProvider = ({ children }) => {
       },
       headers: {
         "x-rapidapi-host": "coingecko.p.rapidapi.com",
-        "x-rapidapi-key": "e5123ac6d1msh54e5b36d11d6985p11249ajsn62e857d978b9",
+        "x-rapidapi-key": api_key,
       },
     };
 
