@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { coins } from "../components/CryptoCoins";
 import Coin from "../components/Coin";
 import { BsSearch } from "react-icons/bs";
+import { useGlobalContext } from "../context/Context";
 
 function Crypto() {
+  const { coins, isLoading } = useGlobalContext();
   const [query, setQuery] = useState("");
 
   const handleSubmit = (e) => {
@@ -14,6 +15,11 @@ function Crypto() {
   const filteredCoins = coins.filter((coin) =>
     coin.name.toLowerCase().includes(query.toLowerCase())
   );
+  if (isLoading) {
+    <div className="loading">
+      <h1>Loading</h1>
+    </div>;
+  }
   return (
     <Wrapper>
       <div className="search">

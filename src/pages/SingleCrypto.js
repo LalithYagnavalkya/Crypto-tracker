@@ -150,13 +150,12 @@ const Page = styled.div`
   justify-content: center;
   ul {
     list-style-type: none;
-    margin-left: -10px;
+    /* margin-left: -10px; */
     display: inline-block;
     li {
       display: flex;
       justify-content: space-between;
       padding: 1rem;
-      width: 100%;
       line-height: 1.9;
       border-bottom: 1px solid black;
       span {
@@ -266,6 +265,8 @@ const Page = styled.div`
         }
       }
     }
+  }
+  @media (max-width: 768px) {
   }
 `;
 

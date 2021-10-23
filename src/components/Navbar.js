@@ -111,7 +111,7 @@ const Wrapper = styled.nav`
     height: 2.5rem;
   }
 
-  @media (max-width: 1005px) {
+  @media (max-width: 1024px) {
     position: fixed;
     z-index: 1;
     width: 100%;

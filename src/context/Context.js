@@ -32,14 +32,6 @@ const AppProvider = ({ children }) => {
     };
     const data = axios.request(options);
     return data;
-    // axios
-    //   .request(options)
-    //   .then(function (response) {
-    //     setExtraData(response.data);
-    //   })
-    //   .catch(function (error) {
-    //     console.error(error);
-    //   });
   };
 
   // used coingecko for global stats
@@ -55,14 +47,6 @@ const AppProvider = ({ children }) => {
     };
     const data = axios.request(options);
     return data;
-    // axios
-    //   .request(options)
-    //   .then(function (response) {
-    //     setData(response.data);
-    //   })
-    //   .catch(function (error) {
-    //     console.error(error);
-    //   });
   };
 
   //this fetch is for all the coins in cryptos page
@@ -86,14 +70,6 @@ const AppProvider = ({ children }) => {
 
     const data = axios.request(options);
     return data;
-    // axios
-    //   .request(options)
-    //   .then(function (response) {
-    //     setCoins(response.data);
-    //   })
-    //   .catch(function (error) {
-    //     console.error(error);
-    //   });
   };
   //for fetching news in home page and news page default.
   const fetchNews = () => {
@@ -117,15 +93,6 @@ const AppProvider = ({ children }) => {
 
     const data = axios.request(options);
     return data;
-
-    // axios
-    //   .request(options)
-    //   .then(function (response) {
-    //     setNews(response.data);
-    //   })
-    //   .catch(function (error) {
-    //     console.error(error);
-    //   });
   };
   //updating the query for specific news search and storing in results.
   const fetchSearchNews = () => {
@@ -172,18 +139,6 @@ const AppProvider = ({ children }) => {
 
     const data = axios.request(options);
     return data;
-
-    // axios
-    //   .request(options)
-    //   .then(function (response) {
-    //     setCoinHistroy(response.data.prices);
-    //   })
-    //   .then(() => {
-    //     fetchCoinData(id);
-    //   })
-    //   .catch(function (error) {
-    //     console.error(error);
-    //   });
   };
   const fetchCoinData = (id) => {
     var axios = require("axios").default;
@@ -207,15 +162,6 @@ const AppProvider = ({ children }) => {
 
     const data = axios.request(options);
     return data;
-    // axios
-    //   .request(options)
-    //   .then(function (response) {
-    //     console.log(response);
-    //     setCoinData(response);
-    //   })
-    //   .catch(function (error) {
-    //     console.error(error);
-    //   });
   };
 
   //updating the query.
@@ -267,12 +213,11 @@ const AppProvider = ({ children }) => {
     setExtraData(response[0].data);
     setData(response[1].data);
     setCoins(response[2].data);
+    console.log(response[2].data);
     setNews(response[3].data);
     const data = await updatDatefrom(days, id);
-    console.log(data);
     setCoinHistroy(data[0].data.prices);
     setCoinData(data[1].data);
-    console.log(coinData);
     setIsLoading(false);
   }, []);
 

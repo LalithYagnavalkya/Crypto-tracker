@@ -5,9 +5,17 @@ import { useGlobalContext } from "../context/Context";
 import Article from "./Article";
 
 const News = () => {
-  const { news } = useGlobalContext();
+  const { news, isLoading } = useGlobalContext();
   const data = { news }.news.value;
   const tempData = data.slice(0, 4);
+
+  if (isLoading) {
+    return (
+      <div className="loading">
+        <h1>Loading</h1>
+      </div>
+    );
+  }
 
   return (
     <>

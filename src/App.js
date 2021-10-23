@@ -42,8 +42,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   position: absolute;
-  top: 0;
-  bottom: 0;
   padding-bottom: 100px;
   min-height: 100vh;
   width: 100%;
@@ -72,7 +70,7 @@ const Wrapper = styled.div`
     align-items: flex-start;
     flex: 1;
   }
-  @media (max-width: 1005px) {
+  @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
     .navbar {
@@ -82,7 +80,7 @@ const Wrapper = styled.div`
       min-width: 100vw;
       max-height: 100px;
       flex: 0.3;
-      /* margin-top: 100px; */
+      top: 0;
     }
     .page {
       display: flex;

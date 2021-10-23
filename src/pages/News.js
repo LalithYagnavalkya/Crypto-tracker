@@ -1,15 +1,18 @@
 import React from "react";
 
 import styled from "styled-components";
-import { AiOutlineDown } from "react-icons/ai";
-import { coins } from "../components/CryptoCoins";
 import { useGlobalContext } from "../context/Context";
 import Article from "../components/Article";
 const News = () => {
-  const { results, updateSearch } = useGlobalContext();
+  const { results, updateSearch, coins, isLoading } = useGlobalContext();
   // const data = JSON.stringify(results);
   const fewCoins = coins.slice(0, 10);
 
+  if (isLoading) {
+    <div className="loading">
+      <h1>Loading...</h1>
+    </div>;
+  }
   return (
     <Wrapper>
       <div className="search">
@@ -60,17 +63,15 @@ const Wrapper = styled.div`
   .searchbar {
     display: flex;
     align-items: center;
-    background-color: white;
+    background-color: #1e1e1e;
+    color: gray;
     border: none;
     /* outline: none; */
     width: 100%;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 2.5rem auto;
     padding: 0.5rem;
-    .icon {
-      font-size: 20px;
-      margin-right: 15px;
-      color: black;
+    option {
     }
   }
 

@@ -7,11 +7,9 @@ import CryptoCoins from "../components/CryptoCoins";
 import News from "../components/News";
 
 function Home() {
-  const { data, extraData, isLoading } = useGlobalContext();
-  const num = extraData;
-  console.log(num);
-  console.log(data);
+  const { data, extraData, isLoading, coins } = useGlobalContext();
 
+  console.log(coins);
   let ranges = [
     { divider: 1e18, suffix: "E" },
     { divider: 1e15, suffix: "P" },
@@ -107,7 +105,6 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   height: 100%;
-  left: 0;
   width: 100%;
   text-transform: capitalize;
   background-color: #292929;
@@ -117,7 +114,6 @@ const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    /* margin-left: 2.2rem; */
     margin-top: 2.6rem;
     width: 80%;
     height: auto;
@@ -164,24 +160,21 @@ const Wrapper = styled.div`
   .container > * {
     flex-basis: 100%;
   }
-  @media (max-width: 1005px) {
+  @media (max-width: 1024px) {
     .stats {
       .content {
         max-width: 140px;
       }
     }
   }
-  @media (max-width: 800px) {
+  @media (max-width: 768px) {
     .stats {
       .container {
         display: flex;
-        flex-direction: column;
-        align-items: left;
         justify-content: center;
         .content {
           display: flex;
           flex-direction: column;
-          align-items: flex-start;
         }
       }
     }
