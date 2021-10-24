@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
+import Nav from "./Nav";
 //icons
 import { ImHome } from "react-icons/im";
 import { GoGlobe, GoGraph } from "react-icons/go";
+import { AiOutlineMenu } from "react-icons/ai";
+import Hamburger from "hamburger-react";
+import { slide as Menu } from "react-burger-menu";
 
 // import PublicIcon from "@mui/icons-material/Public";
 function Navbar() {
-  const [navOpen, toggleNav] = useState();
-
+  const [isOpen, setOpen] = useState(false);
+  console.log(isOpen);
   return (
     <>
       <Wrapper>
@@ -18,25 +21,30 @@ function Navbar() {
           <h1>Coin Script</h1>
         </div>
         <nav>
-          <div className="tabs">
-            <Link className="l" to="/">
-              <button className="tab">
-                <ImHome className="icon" />
-                Home
-              </button>
-            </Link>
-            <Link className="l" to="/crypto">
-              <button className="tab">
-                <GoGraph className="icon" />
-                Cryptocurrencies
-              </button>
-            </Link>
-            <Link className="l" to="/news">
-              <button className="tab">
-                <GoGlobe className="icon" />
-                News
-              </button>
-            </Link>
+          <div className="my-menu">
+            <Nav />
+          </div>
+          <div className={`tabs `}>
+            <div className={` tabs `}>
+              <Link className="l" to="/">
+                <button className="tab">
+                  <ImHome className="icon" />
+                  Home
+                </button>
+              </Link>
+              <Link className="l" to="/crypto">
+                <button className="tab">
+                  <GoGraph className="icon" />
+                  Cryptocurrencies
+                </button>
+              </Link>
+              <Link className="l" to="/news">
+                <button className="tab">
+                  <GoGlobe className="icon" />
+                  News
+                </button>
+              </Link>
+            </div>
           </div>
         </nav>
       </Wrapper>
@@ -61,6 +69,10 @@ const Wrapper = styled.nav`
     color: inherit;
     text-decoration: none;
   }
+  .my-menu {
+    display: none;
+    background-color: white;
+  }
   .title {
     display: flex;
     align-items: center;
@@ -73,6 +85,7 @@ const Wrapper = styled.nav`
     /* font-weight: 900; */
     letter-spacing: 2px;
   }
+
   .tab {
     display: flex;
     align-items: center;
@@ -137,6 +150,22 @@ const Wrapper = styled.nav`
     }
     .icon {
       display: none;
+    }
+  }
+  @media (max-width: 640px) {
+    .my-menu {
+      display: inline;
+    }
+    .tabs {
+      display: none;
+    }
+  }
+  @media (max-width: 440px) {
+    /* display: none; */
+    overflow-x: hidden;
+    display: grid;
+    h1 {
+      font-size: 1.5rem;
     }
   }
 `;

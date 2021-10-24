@@ -102,5 +102,13 @@ const Wrapper = styled.div`
     width: 80%;
     background-color: var(--container-background-color);
   }
+  @media (max-width: 440px) {
+    display: none;
+    overflow-x: hidden;
+    display: grid;
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
 `;
 export default News;

@@ -113,6 +113,12 @@ const Card = styled.div`
   .icon {
     height: 2.5rem;
   }
+  @media (max-width: 440px) {
+    /* display: none; */
+    overflow-x: hidden;
+    /* display: grid; */
+    min-width: 200px;
+  }
 `;
 
 export default Coin;

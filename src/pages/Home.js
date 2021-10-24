@@ -170,13 +170,19 @@ const Wrapper = styled.div`
   @media (max-width: 768px) {
     .stats {
       .container {
-        display: flex;
-        justify-content: center;
+        display: grid;
         .content {
           display: flex;
           flex-direction: column;
         }
       }
+    }
+  }
+  @media (max-width: 440px) {
+    .stats,
+    .crypto,
+    .news {
+      display: grid;
     }
   }
 `;

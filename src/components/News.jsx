@@ -43,6 +43,14 @@ const Wrapper = styled.div`
   padding-left: -10px;
   background-color: #111;
   padding-bottom: 3rem;
+  @media (max-width: 440px) {
+    /* display: none; */
+    overflow-x: hidden;
+    display: grid;
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
 `;
 const Title = styled.div`
   display: flex;
@@ -64,6 +72,14 @@ const Title = styled.div`
 
   .showmore:hover {
     color: #db40c6;
+  }
+  @media (max-width: 440px) {
+    /* display: none; */
+    overflow-x: hidden;
+    display: grid;
+    h1 {
+      font-size: 1.5rem;
+    }
   }
 `;
 export default News;

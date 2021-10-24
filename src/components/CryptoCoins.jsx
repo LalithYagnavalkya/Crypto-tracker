@@ -48,6 +48,7 @@ const CryptoCoins = () => {
   );
 };
 const Wrapper = styled.div`
+  overflow-x: hidden;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -55,6 +56,15 @@ const Wrapper = styled.div`
   /* background-color: #111; */
   /* background-color: #6617cb;
   background-image: linear-gradient(315deg, #6617cb 0%, #cb218e 74%); */
+
+  @media (max-width: 440px) {
+    /* display: none; */
+    overflow-x: hidden;
+    /* display: grid; */
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
 `;
 const Title = styled.div`
   display: flex;
@@ -76,6 +86,15 @@ const Title = styled.div`
 
   .showmore:hover {
     color: #db40c6;
+  }
+
+  @media (max-width: 440px) {
+    /* display: none; */
+    display: grid;
+    overflow-x: hidden;
+    h1 {
+      font-size: 1.5rem;
+    }
   }
 `;
 

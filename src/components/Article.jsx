@@ -78,6 +78,9 @@ const Card = styled.div`
     background-color: #292929;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
   }
+  .header img {
+    max-width: 50px;
+  }
 
   a {
     text-decoration: none;
@@ -163,6 +166,47 @@ const Card = styled.div`
   .aurthor img {
     max-height: 35px;
     margin-right: -5px;
+  }
+  @media (max-width: 440px) {
+    /* display: none; */
+    overflow-x: hidden;
+    /* display: grid; */
+    max-width: 200px;
+    min-width: 200px;
+    .content {
+      text-align: justify;
+      /* margin: 24px 14px; */
+      margin-bottom: 40px;
+      /* max-width: 50px; */
+    }
+    .header img {
+      max-width: 50px;
+    }
+    .content p {
+      font-size: 17px;
+      font-weight: 900;
+      display: flex;
+      color: #929292;
+      max-width: 150px;
+      padding: 1rem;
+      /* margin-left: 12px; */
+    }
+    article img {
+      margin: 10px 20px;
+      padding: 3px;
+      max-width: 50px;
+      max-height: 50px;
+      border-radius: 10px;
+    }
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    h1 {
+      font-size: 1rem;
+    }
   }
 `;
 

@@ -85,8 +85,29 @@ const Wrapper = styled.div`
     .page {
       display: flex;
       position: relative;
+      overflow-x: hidden;
       margin-top: 100px;
       flex: 1;
+    }
+  }
+  @media (max-width: 440px) {
+    display: flex;
+    /* width: 100vw; */
+    overflow-x: hidden;
+    width: inherit;
+    .navbar {
+      position: fixed;
+      top: 0;
+      z-index: 3;
+    }
+    .page {
+      width: inherit;
+      display: flex;
+      /* justify-content: flex-end; */
+      overflow-x: hidden;
+      /* width: 100vw; */
+      flex: 1;
+      margin-top: 100px;
     }
   }
 `;
