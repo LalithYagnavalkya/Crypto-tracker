@@ -4,6 +4,7 @@ import axios from "axios";
 const AppContext = React.createContext();
 
 const api_key = process.env.REACT_APP_API_KEY;
+//this is a simple edit
 
 const AppProvider = ({ children }) => {
   const [data, setData] = useState();
