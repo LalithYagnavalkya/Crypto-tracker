@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  bottom: 0;
+
+  letter-spacing: 1.5px;
+  /* background-color: #222; */
+}
+
+:root {
+  /* --background-color:  */
+  --container-background-color: #121212;
+}
+
+.loading {
+  margin: auto;
+  color: white;
+}
