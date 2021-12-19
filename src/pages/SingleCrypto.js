@@ -32,10 +32,10 @@ function SingleCrypto() {
       if (n >= ranges[i].divider) {
         if (ranges[i].suffix === "T" || "E") {
           return (
-            (n / ranges[i].divider).toFixed(1).toString() + ranges[i].suffix
+            (n / ranges[i].divider)?.toFixed(1).toString() + ranges[i].suffix
           );
         }
-        return (n / ranges[i].divider).toFixed(2).toString() + ranges[i].suffix;
+        return (n / ranges[i].divider)?.toFixed(2).toString() + ranges[i].suffix;
       }
     }
     return n.toString();
