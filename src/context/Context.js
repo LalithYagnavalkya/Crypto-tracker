@@ -47,6 +47,7 @@ const AppProvider = ({ children }) => {
       },
     };
     const data = axios.request(options);
+
     return data;
   };
 
@@ -193,16 +194,16 @@ const AppProvider = ({ children }) => {
     setIsLoading(true);
 
     return Promise.all([
-      fetchextraData(),
+      // fetchextraData(),
       fetchData(),
       fetchCryptoMarket(),
       fetchNews(),
     ]).then((response) => {
-      console.log(response);
-      setExtraData(response[0].data);
-      setData(response[1].data);
-      setCoins(response[2].data);
-      setNews(response[3].data);
+      // console.log(response);
+      // setExtraData(response[0].data);
+      setData(response[0].data);
+      setCoins(response[1].data);
+      setNews(response[2].data);
       setIsLoading(false);
       return response;
     });
@@ -211,11 +212,10 @@ const AppProvider = ({ children }) => {
     setIsLoading(true);
     componentDidMount();
     const response = await fetchAllData();
-    setExtraData(response[0].data);
-    setData(response[1].data);
-    setCoins(response[2].data);
-    console.log(response[2].data);
-    setNews(response[3].data);
+    // setExtraData(response[0].data);
+    setData(response[0].data);
+    setCoins(response[1].data);
+    setNews(response[2].data);
     const data = await updatDatefrom(days, id);
     setCoinHistroy(data[0].data.prices);
     setCoinData(data[1].data);

@@ -71,21 +71,24 @@ function Home() {
           <div className="middle">
             <article className="content">
               <p>total market cap</p>
-              <h2>{formatNumber(extraData.data.totalMarketCap)}</h2>
+              {/* <h2>{formatNumber(extraData.data.totalMarketCap)}</h2> */}
+              <h2>-</h2>
             </article>
             <article className="content">
               <p>Total 24h volume</p>
-              <h2>{formatNumber(extraData.data.total24hVolume)}</h2>
+              {/* <h2>{formatNumber(extraData.data.total24hVolume)}</h2> */}
+              <h2>-</h2>
             </article>
           </div>
           <div className="right">
             <article className="content">
               <p>total Exchanges</p>
-              <h2>{formatNumber(extraData.data.totalExchanges)}</h2>
+              {/* <h2>{formatNumber(extraData.data.totalExchanges)}</h2> */}
+              <h2>-</h2>
             </article>
             <article className="content">
               <p>total markets</p>
-              <h2>{formatNumber(extraData.data.totalMarkets)}</h2>
+              {/* <h2>{formatNumber(extraData.data.totalMarkets)}</h2> */}
             </article>
           </div>
         </div>
